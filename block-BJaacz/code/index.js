@@ -4,13 +4,25 @@
   Create a function named addTwo which accepts a number, adds 2 to the number and return the new value.
 */
 
+let addTwo = function(num) {
+  return num + 2;
+}
+
 /*
   Create a function named addThree which accepts a number, adds 3 to the number and return the new value.
 */
 
+let addThree = function(num) {
+  return num + 3;
+}
+
 /*
   Create a function named addFive which accepts a number, adds 5 to the number and return the new value.
 */
+
+let addFive = function(num) {
+  return num + 5;
+}
 
 /*
   Create a function named addTwoToArray which accepts:
@@ -18,6 +30,15 @@
     - Returns a new array where 2 is added to each element
     - While doing so use the funciton addTwo
 */
+
+function addTwoToArray (arr) {
+
+  for (num of arr) {
+    num = addTwo(num);
+    return arr;
+  }
+
+}
 
 /*
   Create a function named addThreeToArray which accepts:
