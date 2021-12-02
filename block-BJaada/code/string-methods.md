@@ -19,7 +19,7 @@ Only if you are done with step 1 you should go ahead.
    - Example:
      ```js
      
-     ```
+     ```.
    - 
 
 Example:
