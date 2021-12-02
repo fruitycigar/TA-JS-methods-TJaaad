@@ -328,7 +328,7 @@ function filterMale (obj) {
 
   let final = [];
 
-  for (let items in obj) {
+  for (let items of obj) {
     if (isMale(items)) {
       final.push(items);
     }
@@ -360,7 +360,7 @@ function filterFemale (arr) {
 
   let final = [];
 
-  for (let girl in arr) {
+  for (let girl of arr) {
     if (isFemale(girl)) {
       final.push(girl);
     }
@@ -392,7 +392,7 @@ function filterFemale (arr) {
 function filterGradeA (arr) {
   let final = [];
 
-  for (students in arr) {
+  for (students of arr) {
     if (isGradeA(students)) {
       final.push(students);
     }
@@ -423,7 +423,7 @@ function filterGradeA (arr) {
 function filterGradeB (arr) {
   let final = [];
 
-  for (students in arr) {
+  for (students of arr) {
     if (isGradeB(students)) {
       final.push(students);
     }
@@ -453,7 +453,7 @@ function filterGradeB (arr) {
 function filterGradeC (arr) {
   let final = [];
 
-  for (students in arr) {
+  for (students of arr) {
     if (isGradeC(students)) {
       final.push(students);
     }
@@ -486,7 +486,7 @@ filter is a higher order function.
 function filter (arr, cb) {
   let final = [];
 
-  for (items in arr) {
+  for (items of arr) {
     if (cb(students)) {
       final.push(students);
     }
