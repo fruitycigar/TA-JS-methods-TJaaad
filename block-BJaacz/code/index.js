@@ -157,13 +157,12 @@ let val = second();
   - also write the required code to call the function.
 */
 
-// function callMe (cb) {
-//   let final = cb();
-//   return final;
-// }
+function callMe (cb) {
+  let final = cb();
+  return final;
+}
 
-// let blip = callMe(addFive());
-// console.log(blip);
+
 
 // Data Starts (Don't change this)
 const people = [
@@ -199,7 +198,7 @@ const grade = [
 */
 
 function isAdult (obj) {
-  return obj.age > 18 ? true : false
+  return obj.age > 18;
 }
 
 /*
@@ -214,7 +213,7 @@ function isAdult (obj) {
 */
 
 function isMale (obj) {
-  return obj.sex == 'M' ? true : false;
+  return obj.sex == 'M';
 }
 
 /*
@@ -229,7 +228,7 @@ function isMale (obj) {
 */
 
 function isFemale (obj) {
-  return obj.sex == 'F' ? true : false;
+  return obj.sex == 'F';
 }
 
 /*
@@ -244,7 +243,7 @@ function isFemale (obj) {
 */
 
 function isGradeA (obj) {
-  return obj.grade > 12 ? true : false;
+  return obj.grade > 12;
 }
 
 /*
@@ -259,7 +258,7 @@ function isGradeA (obj) {
 */
 
 function isGradeB (obj) {
-  return (obj.grade > 8 && obj.grade) <= 12 ? true : false;
+  return (obj.grade > 8 && obj.grade) <= 12;
 }
 
 /*
@@ -274,7 +273,7 @@ function isGradeB (obj) {
 */
 
 function isGradeC (obj) {
-  return obj.grade <= 8 ? true : false;
+  return obj.grade <= 8;
 }
 
 /*
@@ -395,7 +394,7 @@ function filterGradeA (arr) {
 
   for (students in arr) {
     if (isGradeA(students)) {
-      final.push()
+      final.push(students);
     }
   }
 
@@ -421,6 +420,18 @@ function filterGradeA (arr) {
     ]
 */
 
+function filterGradeB (arr) {
+  let final = [];
+
+  for (students in arr) {
+    if (isGradeB(students)) {
+      final.push(students);
+    }
+  }
+
+  return final;
+}
+
 /*
   Create a function named filterGradeC which accepts:
     - an array of objects
@@ -438,6 +449,18 @@ function filterGradeA (arr) {
       { name: 'Donald', grade: 5, sex: 'M' },
     ]
 */
+
+function filterGradeC (arr) {
+  let final = [];
+
+  for (students in arr) {
+    if (isGradeC(students)) {
+      final.push(students);
+    }
+  }
+
+  return final;
+}
 
 /*
 We are repeating lots of code in above functions like filterGradeC, filterGradeB, filterGradeA, filterAdult. We will fix
@@ -460,6 +483,18 @@ filter is a higher order function.
     console.log(filter(grade, isGradeC));
 */
 
+function filter (arr, cb) {
+  let final = [];
+
+  for (items in arr) {
+    if (cb(students)) {
+      final.push(students);
+    }
+  }
+
+  return final;
+}
+
 /*
   Create a function named multiplyBy which accepts:
     - a number (num)
@@ -478,3 +513,10 @@ filter is a higher order function.
     console.log(multiplyByFive(20)); // 180
     console.log(multiplyByFive(5)); // 45
 */
+
+function multiplyBy(num) {
+  return function(num2) {
+    return num * num2;
+  }
+}
+
