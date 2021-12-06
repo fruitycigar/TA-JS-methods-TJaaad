@@ -12,15 +12,27 @@ Clone the array before using sort method: [...arr]
 
 // - Find the index of `101` in numbers
 
+console.log(numbers.indexOf(101));
+
 // - Find the last index of `9` in numbers
+
+console.log(numbers.lastIndexOf(9));
 
 // - Convert value of strings array into a sentance like "This is a collection of words"
 
+console.log(strings.join(' '));
+
 // - Add two new words in the strings array "called" and "sentance"
+
+strings.push(`called`, `sentence`);
 
 // - Again convert the updated array (strings) into sentance like "This is a collection of words called sentance"
 
+console.log(strings.join(' '));
+
 // - Remove the first word in the array (strings)
+
+strings.shift();
 
 // - Find all the words that contain 'is' use string method 'includes'
 
@@ -28,19 +40,37 @@ Clone the array before using sort method: [...arr]
 
 // - Check if all the numbers in numbers array are divisible by three use array method (every)
 
+console.log(numbers.every(num => num % 3 === 0));
+
 // -  Sort Array from smallest to largest
+
+console.log(numbers.sort((a,b) => a - b ));
 
 // - Remove the last word in strings
 
+strings.pop();
+
 // - Find largest number in numbers
+
+// ????
 
 // - Find longest string in strings
 
+// ????
+
 // - Find all the even numbers
+
+let isEven = numbers.filter(num => num % 2 === 0);
+console.log(isEven);
 
 // - Find all the odd numbers
 
+let isOdd = numbers.filter(num => num % 2 !== 0);
+console.log(isOdd);
+
 // - Place a new word at the start of the array use (unshift)
+
+strings.unshift(`purgatory`);
 
 // - Make a subset of numbers array [18,9,7,11]
 
