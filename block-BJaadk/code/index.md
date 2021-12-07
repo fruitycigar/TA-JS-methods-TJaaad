@@ -10,7 +10,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
+![](.will-revisit-again.png)
 
 
 ```js
