@@ -16,18 +16,44 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+let allGrades = persons.map(person => person.grade);
+let sum = allGrades.reduce((acc, cv) => acc + cv, 0);
+let avgGrade = sum / allGrades.length;
+console.log(avgGrade);
 
 // Find the average grade of male
+let males = persons.filter(person => person.sex === 'M');
+let maleGrades = males.map(male => male.grade);
+let maleSum = maleGrades.reduce((acc, cv) => acc + cv, 0);
+let avgMaleGrade = maleSum / maleGrades.length;
+console.log(avgMaleGrade);
 
 // Find the average grade of female
+let females = persons.filter(person => person.sex === 'F');
+let femaleGrades = females.map(female => female.grade);
+let femaleSum = femaleGrades.reduce((acc, cv) => acc + cv, 0);
+let avgFemaleGrade = femaleSum / femaleGrades.length;
+console.log(avgFemaleGrade);
 
 // Find the highest grade
 
+let highestGrade = [...allGrades].sort((a, b) => a - b).pop();
+
+console.log(`The highest grade is: ${highestGrade}.`);
+
 // Find the highest grade in male
+console.log(`The highest grade amongst males is: ${maleGrades.sort((a, b) => a - b).pop()}`)
 
 // Find the highest grade in female
+console.log(`The highest grade amongst females is: ${femaleGrades.sort((a, b) => a - b).pop()}`)
 
 // Find the highest grade for people whose name starts with 'J' or 'P'
+
+let JPname = persons.filter(person => person.name.startsWith('J') || person.name.startsWith('P'));
+//
+let jpGrade = JPname.map(person => person.grade);
+//
+console.log(`The highest grade among folks whose names start with a J or a P is: ${jpGrade.sort((a, b) => a - b).pop()}`)
 
 const fruitBasket = [
   'banana',
@@ -51,6 +77,7 @@ that fruit has appeared in the array. Store it in new variable fruitsObj
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
+
 
 /* 
 
@@ -90,16 +117,16 @@ Create these functions which accepts a number value and returns a number value:
   - `half` converts the value to half and return the integer value not decimal (use Math.round(21.5) => 21)
 */
 
-let pipeline = [
-  increment,
-  double,
-  decrement,
-  decrement,
-  double,
-  triple,
-  half,
-  increment,
-];
+// let pipeline = [
+//   increment,
+//   double,
+//   decrement,
+//   decrement,
+//   double,
+//   triple,
+//   half,
+//   increment,
+// ];
 
 /*
 Using the pipeline variable that contains the collection of functions, taking the initial value 3 find the output.
@@ -115,18 +142,18 @@ EXAMPLE:
   ...
 */
 
-let pipeline2 = [
-  increment,
-  half,
-  double,
-  decrement,
-  decrement,
-  triple,
-  double,
-  triple,
-  half,
-  increment,
-  triple,
-];
+// let pipeline2 = [
+//   increment,
+//   half,
+//   double,
+//   decrement,
+//   decrement,
+//   triple,
+//   double,
+//   triple,
+//   half,
+//   increment,
+//   triple,
+// ];
 
 // Find the output using pipeline2 the initial value if 8
